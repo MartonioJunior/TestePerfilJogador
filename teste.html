@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="teste.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<meta charset="UTF-8">
+	<title>Ficha do Jogador</title>
+</head>
+<body>
+	<h1 class="title-page">Titulo</h1>
+	<div class="card column-75">
+		<div class="column-33">
+			<div class="perfil">
+				<img class="avatar" src="avatar-profile-e.png" alt="">
+			</div>
+			<div class="perfil">
+				<img class="avatar" src="avatar-profile-k.png" alt="">
+			</div>
+			<div class="perfil">
+				<img class="avatar" src="avatar-profile-s.png" alt="">
+			</div>
+			<div class="perfil">
+				<img class="avatar" src="avatar-profile-a.png" alt="">
+			</div>
+		</div>
+		<div class="column-33">
+			<div class="perfil">
+				<h2 class="title-perfil">
+					Explorer
+					<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
+				</h2>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="perfil">
+				<h2 class="title-perfil">
+					Killer
+					<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
+				</h2>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="perfil">
+				<h2 class="title-perfil">
+					Socializer
+					<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
+				</h2>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="perfil">
+				<h2 class="title-perfil">
+					Adventurer
+					<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
+				</h2>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+		</div>
+		<div class="column-33">
+			<div class="point-counter">
+				<div class="point-values">
+					<button class="minus column-25" onclick="removeExplorerPoint()">-</button>
+					<h2 class="point" id="ePoint">0</h2>
+					<button class="plus column-25" onclick="addExplorerPoint()">+</button>
+				</div>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="point-counter">
+				<div class="point-values">
+					<button class="minus column-25" onclick="removeKillerPoint()">-</button>
+					<h2 class="point" id="kPoint">0</h2>
+					<button class="plus column-25" onclick="addKillerPoint()">+</button>
+				</div>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="point-counter">
+				<div class="point-values">
+					<button class="minus column-25" onclick="removeSocializerPoint()">-</button>
+					<h2 class="point" id="sPoint">0</h2>
+					<button class="plus column-25" onclick="addSocializerPoint()">+</button>
+				</div>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+			<div class="point-counter">
+				<div class="point-values">
+					<button class="minus column-25" onclick="removeAdventurerPoint()">-</button>
+					<h2 class="point" id="aPoint">0</h2>
+					<button class="plus column-25" onclick="addAdventurerPoint()">+</button>
+				</div>
+				<img class="break-rule" src="img-break-rule.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="card column-25">
+		<div class="vertical-center">
+			<h1 id="lPoint">10</h1><p> pts restantes</p>
+			<button onclick="sendResult()">Enviar Ficha</button>
+		</div>
+	</div>
+</body>
+</html>
