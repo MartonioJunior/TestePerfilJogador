@@ -1,16 +1,57 @@
+@font-face {
+    font-family: 'knights_questregular';
+    src: url('knights_quest-webfont.woff2') format('woff2'),
+         url('knights_quest-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'asarregular';
+    src: url('asar-regular-webfont.woff2') format('woff2'),
+         url('asar-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: knights_questregular, asarregular, sans-serif;
 }
 
-.column-20, .column-25, .column-33, .column-50, .column-75 {
+h1, h2, h3, p {
+  color: #34383a;
+}
+
+h1 {
+  font-size: 40px; 
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  font-family: knights_questregular;
+}
+
+.column-20, .column-25, .column-33, .column-50, .column-66, .column-75, column-80 {
   float: left;
   height: 100%;
-  padding: 0 10px;
-  background-color: #777777;
+  padding: 0 8px;
 }
 
 .column-20 {
@@ -29,8 +70,26 @@ body {
   width: 50%;
 }
 
+.column-66 {
+  width: 75%;
+}
+
 .column-75 {
   width: 75%;
+}
+
+.column-80, .column-80-center {
+  width: 80%;
+}
+
+.column-50-center {
+  margin-left: 25%;
+  align-content: center;
+}
+
+.column-80-center {
+  margin-left: 10%;
+  align-content: center;
 }
 
 .row {margin: 0 -5px;}
@@ -49,20 +108,46 @@ body {
   }
 }
 
-.card {
-  height: 500px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.card, .inner-card, .old-scroll {
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
 }
 
-.column-50-center {
-  margin-left: 25%;
-  align-content: center;
+.scroll {
+  height: 500px;
+}
+
+.old-scroll-start, .old-scroll-middle, .old-scroll-end {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.old-scroll-start {
+  background-image: url("background-start.png");
+}
+
+.old-scroll-middle {
+  background-image: url("background-middle.png");
+}
+
+.old-scroll-end {
+  background-image: url("background-end.png");
+}
+
+.card, .inner-card {
+  border-radius: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #e79a40;
+}
+
+.inner-card {
+  background-color: #efd3b4;
 }
 
 .title-page {
+  font-family: asarregular;
   text-align: center;
 }
 
@@ -89,7 +174,12 @@ body {
 .perfil, .avatar, .point-counter {
   height: 25%;
   vertical-align: baseline;
-  padding: 8px;
+  padding: 8px 0;
+}
+
+.arrow {
+  padding: 10%;
+  width: 60%;
 }
 
 .minus {
@@ -110,12 +200,11 @@ body {
 }
 
 .vertical-center {
-  align-content: center;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  position: relative;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
 
 .horizontal-center {
@@ -124,9 +213,13 @@ body {
   padding: 10px;
 }
 
+.intro {
+  margin: 16px 0;
+}
+
 .break-rule {
+  background-size: contain;
   width: 100%;
-  height: 20px;
 }
 
 .responsive, .avatar {
@@ -145,36 +238,53 @@ body {
   height: 30%;
 }
 
-.start-test {
-  
+.button-start {
+  width: 80%;
+  height: 15%;
+}
+
+.button-send {
+  width: 100%;
+  padding: 8px;
+}
+
+.action {
+  background-color: #34383a;
+  color: #efd3b4;
+  border: none;
+  font-size: 1.8em;
+  border-radius: 4px;
 }
 
 .tooltip {
+  padding-top: 8px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 24px;
   float: right;
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  border-bottom: 1px dotted #34383a; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: black;
-  color: #fff;
+  background-color: #34383a;
+  color: #efd3b4;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
- 
-  /* Position the tooltip text - see examples below! */
   position: absolute;
   z-index: 1;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
+  font-size: 16px;
   visibility: visible;
 }
 
