@@ -9,103 +9,100 @@
 	<title>Ficha do Jogador</title>
 </head>
 <body class="old-scroll-middle">
-	<h1 class="title-page">Titulo</h1>
-	<div class="scroll column-80-center">
-		<div class="card column-75">
-			<div class="inner-card column-50">
+	<div class="column-66-center">
+		<button class="head-footer action" onclick="window.location.replace('index.html')"><img src="arrow-up.png" alt=""> Voltar</button>
+		<div class="card">
+			<div class="scroll inner-card">
+				<h1 id="lPoint">10 pts restantes</h1>
+				<div class="column-50">
+					<div class="column-25">
+						<div class="perfil">
+							<img class="avatar" src="avatar-profile-e.png" alt="">
+						</div>
+						<div class="perfil">
+							<img class="avatar" src="avatar-profile-a.png" alt="">
+						</div>
+						<div class="perfil">
+							<img class="avatar" src="avatar-profile-k.png" alt="">
+						</div>
+						<div class="perfil">
+							<img class="avatar" src="avatar-profile-s.png" alt="">
+						</div>
+					</div>
+					<div class="column-75">
+						<div class="perfil">
+							<h2 class="title-perfil">
+								Explorador
+								<div class="tooltip">?<span class="tooltiptext">Se explorar novos locais, encarar novos mundos e ver o mundo inteiro por um novo ângulo é a sua motivação para jogar, você é um EXPLORADOR.<br><br>Os Exploradores não se importam tanto com a vitória ou com a derrota quanto alguns de seus companheiros, e a presença ou ausência de outros jogadores não os afeta de maneira nenhuma.<br><br>Seu objetivo é voltado unicamente para o mundo que os cerca, e eles vivem para desbravar cada um de seus muitos mistérios.</span></div>
+							</h2>
+							<img class="break-rule" src="break-intro.png" alt="">
+						</div>
+						<div class="perfil">
+							<h2 class="title-perfil">
+								Conquistador
+								<div class="tooltip">?<span class="tooltiptext">Se conquistar a vitória, acima de qualquer coisa e acima de qualquer um, é o seu objetivo único e final, então você é um CONQUISTADOR.<br><br>Os Conquistadores tem sua mente voltada sempre para a linha de chegada. Eles interagem com os outros jogadores e com o mundo de maneira diferenciada, sempre focados e sempre objetivando aquilo que os colocará mais próximos do topo do pódio.<br><br>Nada fica no caminho de sua conquista! </span></div>
+							</h2>
+							<img class="break-rule" src="break-intro.png" alt="">
+						</div>
+						<div class="perfil">
+							<h2 class="title-perfil">
+								Assassinos
+								<div class="tooltip">?<span class="tooltiptext">Se a vitória importa menos para você do que a possibilidade de colocar seus oponentes (e aliados!) na palma da sua mão, então com certeza você é um ASSASSINO.<br><br>O objetivo do Assassino é ter a certeza de que o seu oponente não apenas vai ser derrotado, mas que ele vai ser derrotado do jeito que o Assassino quer.<br><br>Ele quer ter o controle, seja para o bem, seja para o mal, e fará o necessário para garantir que consiga!</span></div>
+							</h2>
+							<img class="break-rule" src="break-intro.png" alt="">
+						</div>
+						<div class="perfil">
+							<h2 class="title-perfil">
+								Socializador
+								<div class="tooltip">?<span class="tooltiptext">Se a oportunidade de fazer novos amigos e interagir com os outros jogadores vale muito mais para você do que a vitória no jogo, então você é um SOCIALIZADOR.<br><br>Os socializadores dão um valor muito maior para a possibilidade de interação com outros jogadores, e deixam o mundo do jogo em si como um segundo plano, às vezes nem dando a devida atenção à sua construção.<br><br>Para eles, o que mais importa é que depois que a caixa do jogo esteja fechada, ou o jogo esteja desligado, a diversão ainda continue!</span></div>
+							</h2>
+							<img class="break-rule" src="break-intro.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="column-20">
+					<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
+					<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
+					<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
+					<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
+				</div>
 				<div class="column-25">
-					<div class="perfil">
-						<img class="avatar" src="avatar-profile-e.png" alt="">
+					<div class="point-counter">
+						<div class="point-values">
+							<button class="minus column-25 action" onclick="removeExplorerPoint()">-</button>
+							<h2 class="point" id="ePoint">0</h2>
+							<button class="plus column-25 action" onclick="addExplorerPoint()">+</button>
+						</div>
+						<img class="break-rule" src="break-intro.png" alt="">
 					</div>
-					<div class="perfil">
-						<img class="avatar" src="avatar-profile-k.png" alt="">
+					<div class="point-counter">
+						<div class="point-values">
+							<button class="minus column-25 action" onclick="removeAdventurerPoint()">-</button>
+							<h2 class="point" id="aPoint">0</h2>
+							<button class="plus column-25 action" onclick="addAdventurerPoint()">+</button>
+						</div>
+						<img class="break-rule" src="break-intro.png" alt="">
 					</div>
-					<div class="perfil">
-						<img class="avatar" src="avatar-profile-s.png" alt="">
+					<div class="point-counter">
+						<div class="point-values">
+							<button class="minus column-25 action" onclick="removeKillerPoint()">-</button>
+							<h2 class="point" id="kPoint">0</h2>
+							<button class="plus column-25 action" onclick="addKillerPoint()">+</button>
+						</div>
+						<img class="break-rule" src="break-intro.png" alt="">
 					</div>
-					<div class="perfil">
-						<img class="avatar" src="avatar-profile-a.png" alt="">
+					<div class="point-counter">
+						<div class="point-values">
+							<button class="minus column-25 action" onclick="removeSocializerPoint()">-</button>
+							<h2 class="point" id="sPoint">0</h2>
+							<button class="plus column-25 action" onclick="addSocializerPoint()">+</button>
+						</div>
+						<img class="break-rule" src="break-intro.png" alt="">
 					</div>
-				</div>
-				<div class="column-75">
-					<div class="perfil">
-						<h2 class="title-perfil">
-							Explorer
-							<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
-						</h2>
-						<img class="break-rule" src="img-break-rule.png" alt="">
-					</div>
-					<div class="perfil">
-						<h2 class="title-perfil">
-							Killer
-							<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
-						</h2>
-						<img class="break-rule" src="img-break-rule.png" alt="">
-					</div>
-					<div class="perfil">
-						<h2 class="title-perfil">
-							Socializer
-							<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
-						</h2>
-						<img class="break-rule" src="img-break-rule.png" alt="">
-					</div>
-					<div class="perfil">
-						<h2 class="title-perfil">
-							Adventurer
-							<div class="tooltip">?<span class="tooltiptext">Teste</span></div>
-						</h2>
-						<img class="break-rule" src="img-break-rule.png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="column-20">
-				<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
-				<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
-				<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
-				<div class="perfil"><img class="arrow" src="arrow.png" alt=""></div>
-			</div>
-			<div class="inner-card column-25">
-				<div class="point-counter">
-					<div class="point-values">
-						<button class="minus column-25 action" onclick="removeExplorerPoint()">-</button>
-						<h2 class="point" id="ePoint">0</h2>
-						<button class="plus column-25 action" onclick="addExplorerPoint()">+</button>
-					</div>
-					<img class="break-rule" src="img-break-rule.png" alt="">
-				</div>
-				<div class="point-counter">
-					<div class="point-values">
-						<button class="minus column-25 action" onclick="removeKillerPoint()">-</button>
-						<h2 class="point" id="kPoint">0</h2>
-						<button class="plus column-25 action" onclick="addKillerPoint()">+</button>
-					</div>
-					<img class="break-rule" src="img-break-rule.png" alt="">
-				</div>
-				<div class="point-counter">
-					<div class="point-values">
-						<button class="minus column-25 action" onclick="removeSocializerPoint()">-</button>
-						<h2 class="point" id="sPoint">0</h2>
-						<button class="plus column-25 action" onclick="addSocializerPoint()">+</button>
-					</div>
-					<img class="break-rule" src="img-break-rule.png" alt="">
-				</div>
-				<div class="point-counter">
-					<div class="point-values">
-						<button class="minus column-25 action" onclick="removeAdventurerPoint()">-</button>
-						<h2 class="point" id="aPoint">0</h2>
-						<button class="plus column-25 action" onclick="addAdventurerPoint()">+</button>
-					</div>
-					<img class="break-rule" src="img-break-rule.png" alt="">
 				</div>
 			</div>
 		</div>
-		<div class="inner-card column-20">
-			<div class="vertical-center">
-				<h1 id="lPoint">10</h1>
-				<p> pts restantes</p>
-				<button class="button-send action" onclick="sendResult()">Enviar Ficha</button>
-			</div>
-		</div>
+		<button class="head-footer action" onclick="sendResult()"><img src="arrow-down.png" alt=""> Continuar</button>
 	</div>
 </body>
 </html>

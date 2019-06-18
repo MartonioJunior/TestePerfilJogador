@@ -1,4 +1,4 @@
-var explorerPoints = 0, killerPoints = 0, socializerPoints = 0, adventurerPoints = 0, pointsLeft = 10;
+var explorerPoints = 0, killerPoints = 0, socializerPoints = 0, adventurerPoints = 0, pointsLeft = 5;
 
 function getElement(id) {
 	return document.getElementById(id)
@@ -73,7 +73,7 @@ function updateDisplay() {
 	getElement("kPoint").innerHTML = killerPoints
 	getElement("sPoint").innerHTML = socializerPoints
 	getElement("aPoint").innerHTML = adventurerPoints
-	getElement("lPoint").innerHTML = pointsLeft
+	getElement("lPoint").innerHTML = pointsLeft+" pts restantes"
 }
 
 function sendResult() {
